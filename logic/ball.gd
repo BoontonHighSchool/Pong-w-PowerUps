@@ -13,6 +13,8 @@ func _ready():
 
 
 func _process(delta):
+	$Sprite.scale = Global.spriteSize
+	$Collision.shape.radius = Global.colSize
 	_speed += delta * 2
 	position += _speed * delta * direction
 
@@ -30,10 +32,10 @@ func P1Score():
 
 func Reset():
 	_speed = DEFAULT_SPEED
-
-
-
-
+	if sign(self.scale.x) == 1:
+		self.scale = Vector2(1,1)
+	else:
+		self.scale = Vector2(-1,1)
 
 
 

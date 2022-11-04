@@ -1,10 +1,30 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://output-onlinegiftools (1).png" type="Texture" id=1]
 [ext_resource path="res://SizePowerUp.gd" type="Script" id=2]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 32.5576
+
+[sub_resource type="AtlasTexture" id=32]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 4480, 0, 640, 800 )
+
+[sub_resource type="AtlasTexture" id=33]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 5120, 0, 640, 800 )
+
+[sub_resource type="AtlasTexture" id=34]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 5760, 0, 640, 800 )
+
+[sub_resource type="AtlasTexture" id=35]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 6400, 0, 640, 800 )
 
 [sub_resource type="AtlasTexture" id=25]
 flags = 4
@@ -40,26 +60,6 @@ region = Rect2( 3200, 0, 640, 800 )
 flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 3840, 0, 640, 800 )
-
-[sub_resource type="AtlasTexture" id=32]
-flags = 4
-atlas = ExtResource( 1 )
-region = Rect2( 4480, 0, 640, 800 )
-
-[sub_resource type="AtlasTexture" id=33]
-flags = 4
-atlas = ExtResource( 1 )
-region = Rect2( 5120, 0, 640, 800 )
-
-[sub_resource type="AtlasTexture" id=34]
-flags = 4
-atlas = ExtResource( 1 )
-region = Rect2( 5760, 0, 640, 800 )
-
-[sub_resource type="AtlasTexture" id=35]
-flags = 4
-atlas = ExtResource( 1 )
-region = Rect2( 6400, 0, 640, 800 )
 
 [sub_resource type="AtlasTexture" id=36]
 flags = 4
@@ -111,24 +111,19 @@ flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 12800, 0, 640, 800 )
 
-[sub_resource type="AtlasTexture" id=46]
-flags = 4
-atlas = ExtResource( 1 )
-region = Rect2( 13440, 0, 640, 800 )
-
 [sub_resource type="SpriteFrames" id=24]
 animations = [ {
-"frames": [ SubResource( 25 ), SubResource( 26 ), SubResource( 27 ), SubResource( 28 ), SubResource( 29 ), SubResource( 30 ), SubResource( 31 ) ],
-"loop": false,
-"name": "Start",
-"speed": 8.0
-}, {
 "frames": [ SubResource( 32 ), SubResource( 33 ), SubResource( 34 ), SubResource( 35 ) ],
 "loop": true,
 "name": "Middle",
 "speed": 8.0
 }, {
-"frames": [ SubResource( 36 ), SubResource( 37 ), SubResource( 38 ), SubResource( 39 ), SubResource( 40 ), SubResource( 41 ), SubResource( 42 ), SubResource( 43 ), SubResource( 44 ), SubResource( 45 ), SubResource( 46 ) ],
+"frames": [ SubResource( 25 ), SubResource( 26 ), SubResource( 27 ), SubResource( 28 ), SubResource( 29 ), SubResource( 30 ), SubResource( 31 ) ],
+"loop": false,
+"name": "Start",
+"speed": 8.0
+}, {
+"frames": [ SubResource( 36 ), SubResource( 37 ), SubResource( 38 ), SubResource( 39 ), SubResource( 40 ), SubResource( 41 ), SubResource( 42 ), SubResource( 43 ), SubResource( 44 ), SubResource( 45 ) ],
 "loop": true,
 "name": "End",
 "speed": 8.0
@@ -146,7 +141,7 @@ modulate = Color( 1, 0.32549, 0.545098, 1 )
 scale = Vector2( 0.25, 0.25 )
 frames = SubResource( 24 )
 animation = "Middle"
-frame = 2
+frame = 1
 playing = true
 
 [node name="Timer" type="Timer" parent="."]

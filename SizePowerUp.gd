@@ -21,14 +21,17 @@ func _ready():
 
 func _on_Timer_timeout():
 	get_node("../Ball").Reset()
+	$CollisionShape2D.disabled
 	$Sprite.play("End")
+
 	
 
 func _on_SpeedPowerUp_area_entered(area):
 	if area.name == "Ball":
-		area.size = Vector2(1,1)
+		area.scale = area.scale * 4
+		$CollisionShape2D.disabled
 		$Sprite.play("End")
-		$Timer.start(3)
+		$Timer.start(rand_range(3,9))
 
 func _on_Sprite_animation_finished():
 	if $Sprite.animation == "Start":
